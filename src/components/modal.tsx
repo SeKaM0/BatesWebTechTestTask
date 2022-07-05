@@ -2,18 +2,18 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
-import { useDispatch } from 'react-redux';
 import * as yup from 'yup';
 import { Formik } from 'formik';
 // import classNames from 'classnames';
 import { TextField } from '@mui/material';
 import Form from 'react-bootstrap/Form';
-import { addEvent, setOpenModal } from '../store/reducers/actions';
-import { useTypedSelector } from '../hooks/useTypedSelector';
+import { useAppDispatch, useAppSelector } from '../hooks/useTypedSelector';
+import { eventSlice } from '../store/reducers/eventSlice';
 
 export const Modal: React.FC = () => {
-  const { events } = useTypedSelector(state => state.event);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
+  const { events } = useAppSelector(state => state.eventReducer);
+  const { setOpenModal, addEvent } = eventSlice.actions;
 
   const validationSchema = yup.object().shape({
     title: yup.string().required('It`s required field').max(60, 'Not more than 60'),

@@ -1,17 +1,17 @@
 import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
 import time from './api/timezoneAPI.json';
 import event from './api/eventsAPI.json';
 import { Header } from './components/Header';
-import { loadEvents, loadTimeZones } from './store/reducers/actions';
 import { ControlPanel } from './components/ControlPanel';
 import { EventList } from './components/EventList';
 import { Modal } from './components/modal';
-import { useTypedSelector } from './hooks/useTypedSelector';
+import { useAppDispatch, useAppSelector } from './hooks/useTypedSelector';
+import { eventSlice } from './store/reducers/eventSlice';
 
 export const App: React.FC = () => {
-  const { openModal } = useTypedSelector(state => state.event);
-  const dispatch = useDispatch();
+  const { openModal } = useAppSelector(state => state.eventReducer);
+  const { loadTimeZones, loadEvents } = eventSlice.actions;
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     dispatch(loadTimeZones(time.timezones));

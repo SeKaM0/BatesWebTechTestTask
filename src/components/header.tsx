@@ -1,13 +1,13 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
-import { useTypedSelector } from '../hooks/useTypedSelector';
-import { setTimeZone } from '../store/reducers/actions';
 import { Time } from '../types/events';
 import logo from '../images/Earth.png';
+import { useAppDispatch, useAppSelector } from '../hooks/useTypedSelector';
+import { eventSlice } from '../store/reducers/eventSlice';
 
 export const Header: React.FC = () => {
-  const { times, currentTimeZone } = useTypedSelector(state => state.event);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
+  const { currentTimeZone, times } = useAppSelector(state => state.eventReducer);
+  const { setTimeZone } = eventSlice.actions;
 
   return (
     <header className="header">

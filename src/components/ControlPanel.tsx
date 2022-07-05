@@ -1,11 +1,12 @@
 import React from 'react';
 import classNames from 'classnames';
 import { useDispatch } from 'react-redux';
-import { useTypedSelector } from '../hooks/useTypedSelector';
-import { setIsPublished, setOpenModal } from '../store/reducers/actions';
+import { useAppSelector } from '../hooks/useTypedSelector';
+import { eventSlice } from '../store/reducers/eventSlice';
 
 export const ControlPanel:React.FC = () => {
-  const { isPublished } = useTypedSelector(state => state.event);
+  const { isPublished } = useAppSelector(state => state.eventReducer);
+  const { setIsPublished, setOpenModal } = eventSlice.actions;
   const dispatch = useDispatch();
 
   return (

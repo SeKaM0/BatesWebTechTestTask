@@ -1,9 +1,9 @@
 import React from 'react';
-import { useTypedSelector } from '../hooks/useTypedSelector';
+import { useAppSelector } from '../hooks/useTypedSelector';
 import { Event } from '../types/events';
 
 export const EventList: React.FC = () => {
-  const { events, isPublished, currentTimeZone } = useTypedSelector(state => state.event);
+  const { currentTimeZone, isPublished, events } = useAppSelector(state => state.eventReducer);
 
   return (
     <section className="page__section eventList">
