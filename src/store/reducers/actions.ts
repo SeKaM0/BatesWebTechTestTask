@@ -13,3 +13,31 @@ export const loadEvents = (events: Event[]) => {
     payload: events,
   };
 };
+
+export const setTimeZone = (timeZone:string) => {
+  return {
+    type: EventActionType.SET_TIME_ZONE,
+    payload: timeZone,
+  };
+};
+
+export const setIsPublished = (isPublished: boolean) => {
+  return {
+    type: EventActionType.SET_IS_PUBLISHED,
+    payload: isPublished,
+  };
+};
+
+export const setOpenModal = (openModal: boolean) => {
+  return {
+    type: EventActionType.SET_OPEN_MODAL,
+    payload: openModal,
+  };
+};
+
+export const addEvent = (event: Event) => {
+  return {
+    type: EventActionType.ADD_EVENT,
+    payload: event,
+  };
+};

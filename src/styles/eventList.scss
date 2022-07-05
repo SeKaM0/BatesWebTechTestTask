@@ -1,0 +1,54 @@
+.eventList {
+  padding: 10px 0 0;
+
+  &__cards {
+    display: grid;
+    gap: 20px;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+
+    @media (min-width:1024px) {
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+    }
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  justify-self: center;
+  width: 285px;
+
+  background: #E9E9E9;
+  border-radius: 15px;
+
+  &__title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+
+    padding: 13px 21px 0;
+  }
+
+  &__time {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &__footer {
+    width: 248px;
+    margin: 15px 12px 14px 29px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
