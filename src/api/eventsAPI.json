@@ -2,13 +2,13 @@
 	"events": [
 			{
 				"id": 0,
-				"title": "Lorem ipsum dolor sit amet",
+				"title": "1",
 				"time": "2022-06-27T07:07:08.350Z",
 				"isPublished": false
 			},
 			{
 				"id": 1,
-				"title": "Lorem ipsum dolor sit amet",
+				"title": "2",
 				"time": "2023-06-27T07:07:08.350Z",
 				"isPublished": false
 			},

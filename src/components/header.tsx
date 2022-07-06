@@ -21,19 +21,21 @@ export const Header: React.FC = () => {
               <img src={logo} alt="Earth" className="timezone__content-logo" />
               <h4 className="timezone__content-title">Select Timezone</h4>
             </div>
-            <select
-              className="timezone__select"
-              value={currentTimeZone}
-              onChange={(event) => {
-                dispatch(setTimeZone(event.target.value));
-              }}
-            >
-              {times.map((elem:Time) => (
-                <option key={elem.id} value={elem.value}>
-                  {elem.name}
-                </option>
-              ))}
-            </select>
+            <div className="select">
+              <select
+                className="timezone__select"
+                value={currentTimeZone}
+                onChange={(event) => {
+                  dispatch(setTimeZone(event.target.value));
+                }}
+              >
+                {times.map((elem:Time) => (
+                  <option key={elem.id} value={elem.value}>
+                    {elem.name}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
         </div>
       </div>

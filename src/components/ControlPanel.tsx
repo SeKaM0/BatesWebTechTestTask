@@ -30,7 +30,7 @@ export const ControlPanel:React.FC = () => {
                 isActive: isPublished === false,
               })}
             >
-              UnPublished
+              Unpublished
             </button>
           </div>
           <div className="controlPanel__add">

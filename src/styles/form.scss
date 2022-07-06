@@ -1,0 +1,11 @@
+.fieldError {
+  border-color: red;
+  color: red;
+
+  &__title {
+    color:  red;
+    font-size: 12px;
+    margin-left: 14px;
+    margin-top: 5px;
+  }
+}

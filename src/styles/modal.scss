@@ -3,6 +3,7 @@ $secondary: #38ef7d;
 $white: #fff;
 $gray: #9b9b9b;
 .modal {
+  z-index: 10;
   height: 100vh;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.4);
@@ -12,19 +13,39 @@ $gray: #9b9b9b;
   display: flex;
   align-items: center;
   justify-content: center;
+ 
 
   &__content {
+    position: relative;
     width: 400px;
     height: 600px;
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 30px;
   }
 }
 
 .form {
+
   display: flex;
   flex-direction: column;
 
+  &__datePicker {
+    margin-top: 20px;
+    border: 1px solid #bdbdbd;
+    border-radius: 3px;
+    padding: 18px;
+    box-sizing: border-box;
+    
+    &:focus {
+      outline-color: #5595ff;
+    }
+
+    &:active {
+      outline-color: #5595ff;
+    }
+
+  }
 }

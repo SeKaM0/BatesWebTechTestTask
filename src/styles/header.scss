@@ -1,26 +1,99 @@
 .header {
   &__content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+
+    @include onTablet() {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+    }
   }
 }
 
 .timezone {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   &__content {
     display: flex;
+    flex-direction: row;
     align-items: center;
-
+    padding-bottom: 20px;
+    
+    @include onTablet() {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+      padding-bottom: 0;
+    }
+    
     &-logo {
       width: 32px;
       height: 32px;
       margin: 0 15px 0 0;
+
+      
     }
     &-title {
       margin: 0;
       padding: 0;
-      margin: 0 19px 0 0;
+      margin: 0px 19px 0 0;
+
     }
   }
+
+  @include onTablet() {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  select {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    appearance:none;
+    outline:0;
+    box-shadow:none;
+    background: inherit;
+    background-image: none;
+    padding-left: 40px;
+    flex: 1;
+    border:0 !important;
+    cursor:pointer;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+ }
+ select::-ms-expand {
+    display: none;
+ }
+ .select {
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    overflow: hidden;
+    border-radius: .25em;
+    border:solid 1px black;
+ }
+ .select::after {
+    content: url('../images/selectArrow.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 1em;
+    cursor:pointer;
+    pointer-events:none;
+    transition:.25s all ease;
+ }
+ .select:hover::after {
+    color: #23b499;
+ }
 }
