@@ -1,7 +1,7 @@
 # Front End Developer Code Challenge
 
 Write here about your project in two-three sentences.
-- [ADD DEMO LINK HERE](https://sekam0.github.io/BatesWebTechTestTask/)
+- [DEMO LINK](https://sekam0.github.io/BatesWebTechTestTask/)
 
 ## Description
 Create an event management admin panel
