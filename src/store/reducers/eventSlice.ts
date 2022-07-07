@@ -5,7 +5,12 @@ import {
 } from '../../types/events';
 
 const initialState: EventState = {
-  events: [],
+  events: [{
+    id: 0,
+    title: 'Welcome',
+    time: '2020-06-07T00:00',
+    isPublished: true,
+  }],
   currentTimeZone: 'UTC',
   isPublished: true,
   openModal: false,
@@ -20,10 +25,6 @@ export const eventSlice = createSlice({
   reducers: {
     loadTimeZones(state, action: PayloadAction<Time[]>) {
       state.times = action.payload;
-    },
-
-    loadEvents(state, action: PayloadAction<Event[]>) {
-      state.events = action.payload;
     },
 
     setTimeZone(state, action: PayloadAction<string>) {
