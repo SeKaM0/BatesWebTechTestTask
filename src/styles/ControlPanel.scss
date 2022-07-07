@@ -24,7 +24,7 @@
     flex-direction: column;
     width: 100%;
     max-width: 500px;
-    border-radius: 47px;
+    border-radius: 18px;
     background: #E9E9E9;
 
     @include onTablet() {
@@ -32,6 +32,7 @@
       justify-content: space-between;
       flex-direction: row;
       align-items: center;
+      border-radius: 47px;
     }
   }
 }
@@ -52,6 +53,8 @@
     border-radius: 61px;
 
     transition: 0.3s;
+
+
   }
 
   &__add {
