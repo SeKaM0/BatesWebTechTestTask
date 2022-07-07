@@ -13,7 +13,15 @@ $gray: #9b9b9b;
   display: flex;
   align-items: center;
   justify-content: center;
- 
+  
+  &__close {
+    position: absolute;
+    border: none;
+    background-color: inherit;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
 
   &__content {
     position: relative;

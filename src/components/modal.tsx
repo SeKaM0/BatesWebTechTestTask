@@ -23,6 +23,17 @@ export const Modal: React.FC = ({ children }) => {
           e.stopPropagation();
         }}
       >
+        <button
+          type="button"
+          className="modal__close"
+          onClick={() => {
+            dispatch(setEventToEdit(null));
+            dispatch(setOpenModal(false));
+          }}
+        >
+          X
+
+        </button>
         {children}
       </div>
     </div>
