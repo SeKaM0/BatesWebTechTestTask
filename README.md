@@ -1,6 +1,4 @@
 # Front End Developer Code Challenge
-
-Write here about your project in two-three sentences.
 - [DEMO LINK](https://sekam0.github.io/BatesWebTechTestTask/)
 
 ## Description
