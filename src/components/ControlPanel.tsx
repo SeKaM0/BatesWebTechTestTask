@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { useAppSelector } from '../hooks/useTypedSelector';
 import { eventSlice } from '../store/reducers/eventSlice';
 
-export const ControlPanel:React.FC = () => {
+export const ControlPanel:React.FC = React.memo(() => {
   const { isPublished } = useAppSelector(state => state.eventReducer);
   const { setIsPublished, setOpenModal } = eventSlice.actions;
   const dispatch = useDispatch();
@@ -43,4 +43,4 @@ export const ControlPanel:React.FC = () => {
       </div>
     </section>
   );
-};
+});

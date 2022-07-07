@@ -8,7 +8,7 @@ import { useAppDispatch, useAppSelector } from '../hooks/useTypedSelector';
 import { eventSlice } from '../store/reducers/eventSlice';
 import { Modal } from './modal';
 
-export const EditEvent:React.FC = () => {
+export const EditEvent:React.FC = React.memo(() => {
   const dispatch = useAppDispatch();
   const { events, eventToEdit } = useAppSelector(state => state.eventReducer);
   const { setOpenModal, editEvent, setEventToEdit } = eventSlice.actions;
@@ -90,4 +90,4 @@ export const EditEvent:React.FC = () => {
 
     </Modal>
   );
-};
+});

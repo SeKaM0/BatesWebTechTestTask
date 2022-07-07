@@ -4,7 +4,7 @@ import logo from '../images/Earth.png';
 import { useAppDispatch, useAppSelector } from '../hooks/useTypedSelector';
 import { eventSlice } from '../store/reducers/eventSlice';
 
-export const Header: React.FC = () => {
+export const Header: React.FC = React.memo(() => {
   const dispatch = useAppDispatch();
   const { currentTimeZone, times } = useAppSelector(state => state.eventReducer);
   const { setTimeZone } = eventSlice.actions;
@@ -41,4 +41,4 @@ export const Header: React.FC = () => {
       </div>
     </header>
   );
-};
+});

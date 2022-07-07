@@ -13,7 +13,7 @@ import delet from '../images/Delete.png';
 import publish from '../images/Publish.png';
 import { eventSlice } from '../store/reducers/eventSlice';
 
-export const EventList: React.FC = () => {
+export const EventList: React.FC = React.memo(() => {
   const dispatch = useAppDispatch();
   const {
     isPublished, events, currentTimeZone, openOption,
@@ -90,4 +90,4 @@ export const EventList: React.FC = () => {
       </div>
     </section>
   );
-};
+});
